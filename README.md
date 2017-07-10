@@ -5,7 +5,7 @@ Traffic sign recognition with TensorFlow
 
 A simple example of using Machine Learning to recognise images.
 
-This optionally integrates with the anki-mapr-demo - when the sign is recognised (e.g. "STOP") the appropriate command is send the Anki cars.
+This optionally integrates with the anki-mapr-demo - when the sign is recognised (e.g. "STOP") the appropriate command is sent the Anki cars.
 
 If you want to use that, the master for anki-mapr-demo is here: https://github.com/tgrall/anki-mapr-demo
 
@@ -15,7 +15,7 @@ The TensorFlow programs are based on this post: https://medium.com/@waleedka/tra
 
 learn.py uses TensorFlow to create a model that recognises different images. If the loss of the model is below a given threshold then the model is saved.
 
-predict_camera.py uses a saved model to give a prediction of the image. The program can optionally control the capture of the image using a webcam and, again optionally, send commands to the anki-mapr-demo controller so that when an image is recognised (e.g. "GO") then the appropriate command is sent to the Anki cars.
+predict_camera.py uses a saved model to give a prediction of an image. The program can optionally control the capture of the image using a webcam and, again optionally, send commands to the anki-mapr-demo controller so that when an image is recognised (e.g. "GO") then the appropriate command is sent to the Anki cars.
 
 A model trained on a set of six images with a low loss value is included along with the 120 training images used.
 
@@ -47,7 +47,7 @@ A PowerPoint presentation with timed slide changes is also provided (see below).
 Beneath the directories for both the training images and the images fed into the prediction, the programs assume that the label directories (0,1,2,3,4,5) exist. For training, these correspond to the 6 different images (STOP, GO, CONNECT, SCAN, FAST, NONE). For prediction, the directories exist only to populate the labels correctly (there is presumably a more elegant way to do this) and directory "0" is the location searched for an image.
 
 ## Usage
-Assumes a working TensorFlow environment.
+Assumes a working TensorFlow environment with the required Python packages installed.
 
 ### Learning:
 Create a directory (DIR) and beneath it six subdirectories (0,1,2,3,4,5) and populate the relevant image into the appropriate subdirectory (so for example put images for STOP signs into directory 0). Then use learn.py to create a model
@@ -55,7 +55,7 @@ Create a directory (DIR) and beneath it six subdirectories (0,1,2,3,4,5) and pop
 e.g. python learn.py --train_dir=DIR --trains=2000 --learning_rate=0.01 --models=10 --min_loss=0.1
 
 ### Predicting (Manually Controlling Images)
-Alter runPredict.sh as necessary and run the script (or modifiy for your environment). Place images in the "0" subdirectory of the testing directory. The program will detect the image, predict what the image is, and then delete the image.
+Alter runPredict.sh as necessary and run the script (or modifiy for your environment). Place an image in the "0" subdirectory of the testing directory. The program will detect the image, predict what the image is, and then delete the image.
 
 ### Predicting (Using the Camera Directly)
 As above, but include the "use_camera" parameter as in ruPredictUseCamera.sh
