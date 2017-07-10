@@ -38,7 +38,7 @@ A PowerPoint presentation with timed slide changes is also provided (see below).
 ## Software Used
 
 - TensorFlow
-- Python
+- Python (with sckikit-image and requests packages)
 - fswebcam (a different package could easily be used)
 
 ## Assumed Directroy Structure
