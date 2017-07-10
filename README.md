@@ -4,9 +4,10 @@ Traffic sign recognition with TensorFlow
  ![alt tag](architecture.png)
 
 A simple example of using Machine Learning to recognise images.
+
 This optionally integrates with the anki-mapr-demo - when the sign is recognised (e.g. "STOP") the appropriate command is send the Anki cars.
 
-The master for anki-mapr-demo is here: https://github.com/tgrall/anki-mapr-demo
+If you want to use that, the master for anki-mapr-demo is here: https://github.com/tgrall/anki-mapr-demo
 
 The TensorFlow programs are based on this post: https://medium.com/@waleedka/traffic-sign-recognition-with-tensorflow-629dffc391a6
 
